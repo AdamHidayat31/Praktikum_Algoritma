@@ -1,0 +1,33 @@
+#Adam Hidayat
+#06400220017
+print("\tProgram Konvensi Bilangan")
+print("1 --> Desimal ke Biner")
+print("2 --> Biner ke Desimal")
+print("3 --> Exit")
+
+def program():
+    while True:
+        menu=int(input("\nSilahkan Pilih Menu :"))
+        if menu==1:
+            bil=int(input("\nMasukkan Bilangan Desimal :"))
+            hasil =''
+            if bil==0:
+                print(0)
+            else:
+                while bil>0:
+                    sisa = bil%2
+                    bil = bil//2
+                    hasil = str(sisa)+hasil
+                print("Nilai binernya adalah", hasil)
+        elif menu==2:
+            biner=input("\nMasukkan Bilangan Biner :")
+            desimal=0
+            panjang=len(biner)-1
+            for digit in biner:
+                desimal=desimal+int(digit)*2**panjang
+                panjang=panjang-1
+            print("Nilai desimalnya adalah", desimal)
+        elif menu==3:
+            print("Terima kasih telah menggunakan program ini!")
+            break
+program()
