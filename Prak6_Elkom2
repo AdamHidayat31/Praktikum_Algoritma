@@ -1,7 +1,7 @@
 #Adam Hidayat
 isi=input("Isi list angka (integer) :")
 splitted_isi=isi.split()
-for x in splitted_isi[1:]:
+for x in splitted_isi[0:]:
     x=int(x)
     if x%2==1:
         print(x, "adalah angka ganjil")
